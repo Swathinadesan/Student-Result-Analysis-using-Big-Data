@@ -17,5 +17,8 @@ CSV -> HDFS -> MapReduce -> processed CSV -> Hive -> analytics
 3. Run the MapReduce job using the commands in `scripts/run_mapreduce.sh` or the Windows equivalent.
 4. Load the processed output into Hive using `hive/student_result_analysis.sql`.
 5. Run the queries to show average, highest marks, pass percentage and toppers.
+6. run process
+7. Get-Content .\data\student_results.csv | python .\mapreduce\mapper.py | python .\mapreduce\reducer.py
+8.  Get-Content .\data\student_results.csv |python .\mapreduce\reducer.py
 
 Note: `mapper.py` and `reducer.py` are written in Hadoop Streaming style. They can also be tested locally with `scripts/run_local_demo.bat`.
